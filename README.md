@@ -5,10 +5,12 @@
 ###  Surfing Chef 3.0 is the latest incarnation of a WordPress starter theme aiming to modernize, organize and enhance some aspects of WordPress theme development.
 
 ## Usage
-- Start with a fresh, working WordPress install.   
-- Copy `starter` branch to the theme folder.  
-- Change browserSync proxy path in gulpfile.js (line 29) to point to the WordPress install.
-- Start tweeking.  
+- Start with a fresh, working WordPress install   
+- Copy `starter` branch to the theme folder  
+- Navigate to project root in terminal and install packages, `npm install`   
+- Change browserSync proxy path in gulpfile.js (line 29) to point to the WordPress install  
+- import the test data from [wptest.io](http://wptest.io/) for development  
+- Start tweeking  
 
 
 ## License
