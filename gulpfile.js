@@ -53,7 +53,7 @@ gulp.task('watch',['browserSync','sass'], function(){
 // delete previous production build
 gulp.task('prod:cleanfolder', function(){
     return del([
-      'build/**/*'
+      '_build/**/*'
     ]);
   });
 
@@ -66,16 +66,13 @@ gulp.task('prod:imgMin', ['prod:cleanfolder'], function(){
         {svg: {engine: 'svgo', command: '--multipass'}},
         {gif: {engine: 'gifsicle', command: ['--colors', '64', '--use-col=web']}}, function(){
     });
-//     return gulp.src('./img/**/*')
-//         .pipe(compressimages())
-//         .pipe(gulp.dest('build/img'));
 });
 
 // minify css for build
 gulp.task('prod:sass', ['prod:cleanfolder'], function() {
   gulp.src('src/scss/styles.scss')
   .pipe(sass({outputStyle: 'compressed'}))
-  .pipe(gulp.dest('build/css/'));
+  .pipe(gulp.dest('_build/css/'));
 });
 
 // uglify and mangle js
@@ -85,7 +82,7 @@ gulp.task('prod:scripts', ['prod:sass'], function(){
             ])
     .pipe(concat('scripts.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('_build/js'));
   
     // gulp.src([
     //           'src/js/**/*/'
@@ -101,15 +98,15 @@ gulp.task('prod:copy', ['prod:imgMin'], function(){
                     '!./src/img/*/',
                     '!./src/js/*/'
                   ])
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('./_build'));
   });
 
   // delete previous production build
 gulp.task('prod:tidy', ['prod:copy'], function(){
     return del([
-      'build/scss',
-      'build/**/*{bu*,BU*}',
-      'build/**/*jquery*'
+      '_build/scss',
+      '_build/**/*{bu*,BU*}',
+      '_build/**/*jquery*'
     ]);
   });
   
