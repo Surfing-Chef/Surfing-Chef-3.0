@@ -33,7 +33,7 @@ gulp.task('browserSync',['php'], function() {
 });
 
 gulp.task('sass', function(){
-    return gulp.src('src/scss/**/*.scss')
+    return gulp.src('src/sass/**/*.scss')
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
     .on('error', handleError) //Show details on any errors
     .pipe(gulp.dest('src/css'))
@@ -43,7 +43,7 @@ gulp.task('sass', function(){
 });
 
 gulp.task('watch',['browserSync','sass'], function(){
-    gulp.watch('src/scss/**/*.scss', ['sass']);
+    gulp.watch('src/sass/**/*.scss', ['sass']);
     gulp.watch('src/*.php', browserSync.reload); 
     gulp.watch('src/js/**/*.js', browserSync.reload);
 });
@@ -70,7 +70,7 @@ gulp.task('prod:imgMin', ['prod:cleanfolder'], function(){
 
 // minify css for build
 gulp.task('prod:sass', ['prod:cleanfolder'], function() {
-  gulp.src('src/scss/styles.scss')
+  gulp.src('src/sass/styles.scss')
   .pipe(sass({outputStyle: 'compressed'}))
   .pipe(gulp.dest('_build/css/'));
 });
@@ -104,7 +104,7 @@ gulp.task('prod:copy', ['prod:imgMin'], function(){
   // delete previous production build
 gulp.task('prod:tidy', ['prod:copy'], function(){
     return del([
-      '_build/scss',
+      '_build/sass',
       '_build/**/*{bu*,BU*}',
       '_build/**/*jquery*'
     ]);
