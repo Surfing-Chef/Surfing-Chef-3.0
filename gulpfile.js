@@ -26,7 +26,8 @@ gulp.task('php', function() {
 gulp.task('browserSync',['php'], function() {
     browserSync.init({
         browser: ["chrome", "firefox"],
-        proxy: '127.0.0.1:8010',
+        proxy   : "http://localhost/surfing-chef-3.0", // update this path to project root
+        // proxy: '127.0.0.1:8010',
         port: 8080,
         open: true,
         notify: false
@@ -48,6 +49,9 @@ gulp.task('watch',['browserSync','sass'], function(){
     gulp.watch('src/*.php', browserSync.reload); 
     gulp.watch('src/js/**/*.js', browserSync.reload);
 });
+
+// Default Task
+gulp.task('default', ['watch']);
 
 // DEPLOYMENT
 
