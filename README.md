@@ -4,6 +4,13 @@
 
 ###  Surfing Chef 3.0 is the latest incarnation of a WordPress starter theme aiming to modernize, organize and enhance some aspects of WordPress theme development.
 
+## Usage
+- Start with a fresh, working WordPress install.   
+- Copy `starter` branch to the theme folder.  
+- Change browserSync proxy path in gulpfile.js (line 29) to point to the WordPress install.
+- Start tweeking.  
+
+
 ## License
 
 Surfing Chef 3.0 theme is licensed under the [GNU license](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
