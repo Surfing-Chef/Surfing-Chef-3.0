@@ -1,9 +1,8 @@
-# Surfing Chef 3.0 — CSS Grid WordPress Theme
+# Surfing Chef 3.0 - CSS Grid WordPress Theme
 
 > The `starter` branch ~~is~~ will be a stable blank WordPress Starter theme. Other branches are for various stages of development and deployment.
 
-###  Surfing Chef 3.0 is the latest incarnation of a WordPress Starter Theme which aims to modernize, organize and enhance some aspects of WordPress theme development.
-
+###  Surfing Chef 3.0 is the latest incarnation of a WordPress starter theme aiming to modernize, organize and enhance some aspects of WordPress theme development.
 
 ## License
 
