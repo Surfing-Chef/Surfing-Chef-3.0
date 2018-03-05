@@ -38,16 +38,18 @@ gulp.task('sass', function(){
     return gulp.src('src/sass/**/*.scss')
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
     .on('error', handleError) //Show details on any errors
-    .pipe(gulp.dest('src/css'))
+    .pipe(gulp.dest('src/'))
     .pipe(browserSync.reload({
         stream: true
       }));
 });
 
 gulp.task('watch',['browserSync','sass'], function(){
-    gulp.watch('src/sass/**/*.scss', ['sass']);
-    gulp.watch('src/*.php', browserSync.reload); 
-    gulp.watch('src/js/**/*.js', browserSync.reload);
+    // gulp.watch('src/sass/**/*.scss', ['sass']);
+    gulp.watch('src/**/*.scss', ['sass']);
+    gulp.watch('src/**/*.php', browserSync.reload); 
+    gulp.watch('src/**/*.js', browserSync.reload);
+    // gulp.watch('src/js/**/*.js', browserSync.reload);
 });
 
 // Default Task
@@ -73,11 +75,13 @@ gulp.task('prod:imgMin', ['prod:cleanfolder'], function(){
     });
 });
 
+// autoprefixer
+
 // minify css for build
 gulp.task('prod:sass', ['prod:cleanfolder'], function() {
   gulp.src('src/sass/styles.scss')
   .pipe(sass({outputStyle: 'compressed'}))
-  .pipe(gulp.dest('_build/css/'));
+  .pipe(gulp.dest('_build/'));
 });
 
 // uglify and mangle js
@@ -88,11 +92,6 @@ gulp.task('prod:scripts', ['prod:sass'], function(){
     .pipe(concat('scripts.js'))
     .pipe(uglify())
     .pipe(gulp.dest('_build/js'));
-  
-    // gulp.src([
-    //           'src/js/**/*/'
-    //         ])
-    // .pipe(gulp.dest('build/js'));
   });
 
   // copy development files not requiring processing
