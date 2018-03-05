@@ -25,6 +25,7 @@ gulp.task('php', function() {
 
 gulp.task('browserSync',['php'], function() {
     browserSync.init({
+        browser: ["chrome", "firefox"],
         proxy: '127.0.0.1:8010',
         port: 8080,
         open: true,
