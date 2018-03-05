@@ -45,9 +45,9 @@ gulp.task('sass', function(){
 });
 
 gulp.task('watch',['browserSync','sass'], function(){
-    gulp.watch('src/sass/**/*.scss', ['sass']);
-    gulp.watch('src/*.php', browserSync.reload); 
-    gulp.watch('src/js/**/*.js', browserSync.reload);
+    gulp.watch('src/**/*.scss', ['sass']);
+    gulp.watch('src/**/*.php', browserSync.reload); 
+    gulp.watch('src/**/*.js', browserSync.reload);
 });
 
 // Default Task
