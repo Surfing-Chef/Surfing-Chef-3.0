@@ -6,7 +6,7 @@
 
 ## Usage
 - Start with a fresh, working WordPress install   
-- Copy `starter` branch to the theme folder  
+- Copy `starter` branch zip and install to the new theme folder.  DO NOT CLONE PLEASE   
 - Navigate to project root in terminal and install packages, `npm install`   
 - Change browserSync proxy path in gulpfile.js (line 29) to point to the WordPress install  
 - import the test data from [wptest.io](http://wptest.io/) for development  
