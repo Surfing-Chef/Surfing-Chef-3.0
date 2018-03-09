@@ -10,16 +10,24 @@
         display: none;
     }
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0 30px;
 
     .site-branding {
+        justify-self: start;
         display: grid;
         grid-template-columns: 150px 1fr;
+        grid-gap: 20px;
         align-items: center;
         justify-content: start;
     }
 
     .main-navigation {
+        justify-self: end;
+        align-self: center;
         background: rgba(0,0,0,0.1);
+
         ul {
             display: grid;
             grid-template-columns: repeat(5, auto);
