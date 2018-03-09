@@ -4,15 +4,18 @@
 }
 
 .site-header {
+    display: grid;
 
     .site-branding {
-
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        align-items: center;
+        justify-content: start;
     }
 
     .main-navigation {
-        
+        background: rgba(0,0,0,0.1);
     }
-
 }
 
 .site-content {

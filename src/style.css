@@ -721,6 +721,16 @@ a {
   display: grid;
   grid-gap: 20px; }
 
+.site-header {
+  display: grid; }
+  .site-header .site-branding {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    justify-content: start; }
+  .site-header .main-navigation {
+    background: rgba(0, 0, 0, 0.1); }
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
