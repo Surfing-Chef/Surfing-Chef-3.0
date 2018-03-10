@@ -5,6 +5,9 @@
         "brand nav";    
   
     .site-branding {
+        >* {
+            margin: 0;
+        }
         grid-area: brand;
         display: grid;
         grid-template-columns: 60px 1fr;
