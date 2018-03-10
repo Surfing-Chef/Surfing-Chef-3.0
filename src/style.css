@@ -63,7 +63,8 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  margin: 0; }
+  margin: 0;
+  overflow-x: hidden; }
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -717,24 +718,23 @@ a {
 /*--------------------------------------------------------------
 ## Site Structure
 --------------------------------------------------------------*/
-.site {
-  display: grid;
-  grid-gap: 20px; }
-
 .site-header {
-  display: grid;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
   grid-gap: 20px;
-  grid-template-areas: "brand brand nav nav nav" "brand brand nav nav nav"; }
-  .site-header::before {
-    display: none; }
+  display: grid;
+  align-items: center;
+  grid-template-areas: "brand nav" "brand nav"; }
   .site-header .site-branding {
     grid-area: brand;
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 60px 1fr;
+    grid-column-gap: 30px;
     grid-template-areas: "logo sitename" "logo tagline"; }
+    .site-header .site-branding > * {
+      margin: 0; }
     .site-header .site-branding .custom-logo-link {
-      grid-area: logo;
-      width: 150px; }
+      grid-area: logo; }
     .site-header .site-branding .site-title {
       grid-area: sitename;
       align-self: end;
@@ -748,6 +748,22 @@ a {
   .site-header .main-navigation {
     grid-area: nav;
     align-self: center; }
+    .site-header .main-navigation .menu {
+      display: flex;
+      justify-content: flex-end; }
+      .site-header .main-navigation .menu li {
+        padding: 0 10px; }
+    .site-header .main-navigation .sub-menu {
+      display: flex;
+      flex-direction: column; }
+
+.site-footer {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  min-height: 100px;
+  display: grid;
+  align-content: center;
+  justify-content: center; }
 
 /*--------------------------------------------------------------
 ## Posts and pages
