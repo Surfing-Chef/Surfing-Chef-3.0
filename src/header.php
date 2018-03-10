@@ -27,6 +27,16 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'surfing_chef' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		<?php if ( is_front_page() && is_home() ) : ?>
+			<div class="social-icons">
+				<ul>
+					<li class="twitter"><i class="fab fa-twitter"></i></li>
+					<li class="pinterest"><i class="fab fa-pinterest"></i></li>
+					<li class="linkedin"><i class="fab fa-linkedin"></i></li>
+				</ul>
+			</div>
+		<?php endif; ?>
+	
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
