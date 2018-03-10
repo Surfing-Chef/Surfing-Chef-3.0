@@ -5,8 +5,35 @@
     display: grid;
     align-items: center;
     grid-template-areas:
+        "social social"
         "brand nav"
-        "brand nav";    
+        "brand nav";
+         
+    .social-icons {
+        grid-area: social;
+        font-size: 1.5em;
+        
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 100px);
+            justify-content: center;
+            grid-gap: 20px;
+        }
+
+        &::after {
+            display: block;
+            content: '';
+            height: 1px;
+            background: linear-gradient(to left, transparent, $color__test-grey, transparent);
+
+        }
+    } 
+
+
+          
   
     .site-branding {
         >* {
