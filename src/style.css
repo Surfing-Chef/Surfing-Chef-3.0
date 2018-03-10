@@ -724,7 +724,23 @@ a {
   grid-gap: 20px;
   display: grid;
   align-items: center;
-  grid-template-areas: "brand nav" "brand nav"; }
+  grid-template-areas: "social social" "brand nav" "brand nav"; }
+  .site-header .social-icons {
+    grid-area: social;
+    font-size: 1.5em; }
+    .site-header .social-icons ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 100px);
+      justify-content: center;
+      grid-gap: 20px; }
+    .site-header .social-icons::after {
+      display: block;
+      content: '';
+      height: 1px;
+      background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.2), transparent); }
   .site-header .site-branding {
     grid-area: brand;
     display: grid;
