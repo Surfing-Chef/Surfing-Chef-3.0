@@ -1,9 +1,4 @@
 .site-header {
-    &::before, {
-        display: none;
-    }
-
-    display: grid;
     grid-gap: 20px;
     grid-template-areas:
         "brand nav"
