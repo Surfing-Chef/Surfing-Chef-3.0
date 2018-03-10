@@ -38,6 +38,20 @@
     .main-navigation {
         grid-area: nav;
         align-self: center;
+        
+        .menu {
+            display: flex;
+            justify-content: flex-end;
+
+            li {
+                padding: 0 10px;
+            }
+        }
+
+        .sub-menu {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
 
