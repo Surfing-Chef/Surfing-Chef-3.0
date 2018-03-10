@@ -7,7 +7,7 @@
     .site-branding {
         grid-area: brand;
         display: grid;
-        grid-template-columns: 150px 1fr;
+        grid-template-columns: 60px 1fr;
         grid-template-areas:
         "logo sitename"
         "logo tagline";
