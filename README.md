@@ -12,7 +12,8 @@
 - import the test data from [wptest.io](http://wptest.io/) for development  
 - Start tweeking  
 
-
 ## License
+Surfing Chef 3.0 theme is licensed under the [GNU license](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html).  
 
-Surfing Chef 3.0 theme is licensed under the [GNU license](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
+## Dev Notes
+- Chrome didnt like .site with display: grid and grid-gap.  Research revealed over-nesting to be the reason.  
