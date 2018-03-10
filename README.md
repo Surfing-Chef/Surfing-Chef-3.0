@@ -17,3 +17,7 @@ Surfing Chef 3.0 theme is licensed under the [GNU license](https://www.gnu.org/l
 
 ## Dev Notes
 - Chrome didnt like .site with display: grid and grid-gap.  Research revealed over-nesting to be the reason.  
+
+## To Do  
+- Properly wp_enqueue_scripts to header  
+- Create a plugin for the social icon links
