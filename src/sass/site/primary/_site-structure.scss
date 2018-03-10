@@ -46,5 +46,10 @@
 }
 
 .site-footer {
+    background: $color__test-grey;
+    padding: 20px;
+    min-height: 100px;
     display: grid;
+    align-content: center;
+    justify-content: center;
 }
