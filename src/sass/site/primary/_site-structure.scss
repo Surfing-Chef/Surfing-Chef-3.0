@@ -15,6 +15,7 @@
         grid-area: brand;
         display: grid;
         grid-template-columns: 60px 1fr;
+        grid-column-gap: 30px;
         grid-template-areas:
         "logo sitename"
         "logo tagline";
