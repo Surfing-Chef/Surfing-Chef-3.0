@@ -76,7 +76,7 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: $size__query-tab) {
 	.menu-toggle {
 		display: none;
 	}
