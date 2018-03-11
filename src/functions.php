@@ -137,6 +137,9 @@ function surfing_chef_scripts() {
 	// Within <BODY>
 
 	wp_enqueue_script( 'surfing_chef-navigation', get_template_directory_uri() . '/js/navigation.js', array(), false, true );
+	// ensure jquery is loaded once
+	wp_deregister_script('jquery');
+	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), false, true);
 	
 	wp_enqueue_script( 'surfing_chef-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), false, true );
 
