@@ -131,6 +131,10 @@ add_action( 'widgets_init', 'surfing_chef_widgets_init' );
  * Enqueue scripts and styles.
  */
 function surfing_chef_scripts() {
+	// Within <HEAD>
+	wp_enqueue_script( 'surfing_chef-font-awesome', '//use.fontawesome.com/releases/v5.0.8/js/all.js', array(), false, false );
+
+	// Within <BODY>
 
 	wp_enqueue_script( 'surfing_chef-navigation', get_template_directory_uri() . '/js/navigation.js', array(), false, true );
 	
