@@ -1,0 +1,105 @@
+/*
+* SITE HEADER STYLES AND STRUCTURE
+*/
+
+// SITE HEADER WRAPPER \\
+
+.site-header {
+    background: $color__test-grey;
+    padding: 0 20px;
+    grid-gap: 20px;
+    display: grid;
+    align-items: center;
+    grid-template-areas:
+        "social social"
+        "brand nav"
+        "brand nav";
+         
+}
+
+.social-icons {
+    transition: 1s;
+    grid-area: social;
+    font-size: 1.5em;
+    
+    ul {
+        margin: 0;
+        padding: 10px 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 100px);
+        justify-content: center;
+        grid-gap: 10px;
+        text-align: center;
+    }
+
+    &::after {
+        display: block;
+        content: '';
+        height: 1px;
+        background: linear-gradient(to left, transparent, $color__test-grey, transparent);
+
+    }
+} 
+
+// SITE BRANDING \\
+
+.site-branding {
+    >* {
+        margin: 0;
+    }
+    grid-area: brand;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-column-gap: 30px;
+    grid-template-areas:
+    "logo sitename"
+    "logo tagline";
+}
+
+// Logo \\
+.custom-logo-link {
+    grid-area: logo;
+}
+
+// Title \\
+
+.site-title {
+    grid-area: sitename;
+    align-self: end;
+    display: grid;
+    justify-content: start;
+    
+    font-size: $font__site-title-size;
+    font-weight: $font__site-title-weight;
+}
+
+// Tagline \\
+
+.site-description {
+    grid-area: tagline;
+    align-self: start;
+    display: grid;
+    justify-content: start;
+}
+
+// NAVIGATION \\
+
+.main-navigation {
+    grid-area: nav;
+    align-self: center;
+    
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+
+        li {
+            padding: 0 10px;
+        }
+    }
+
+    .sub-menu {
+        display: flex;
+        flex-direction: column;
+    }
+}
