@@ -99,7 +99,7 @@ function surfing_chef_content_width() {
 add_action( 'after_setup_theme', 'surfing_chef_content_width', 0 );
 
 /**
- * Register widget area.
+ * Register widget area(s).
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
@@ -113,6 +113,17 @@ function surfing_chef_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Top Bar', 'surfing_chef' ),
+		'id'            => 'top-bar',
+		'class'         => '',
+		'description'   => esc_html__( 'Add stuff here.', 'surfing_chef' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
 }
 add_action( 'widgets_init', 'surfing_chef_widgets_init' );
 
@@ -124,7 +135,7 @@ function surfing_chef_scripts() {
 	wp_enqueue_script( 'surfing_chef-navigation', get_template_directory_uri() . '/js/navigation.js', array(), false, true );
 	
 	wp_enqueue_script( 'surfing_chef-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), false, true );
-	wp_enqueue_script('google-maps', '//maps.googleapis.com/maps/api/js?&sensor=false', array(), '3', true);
+
 	wp_enqueue_script( 'surfing_chef-font-awesome', '//use.fontawesome.com/releases/v5.0.8/js/all.js', array(), false, false );
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
