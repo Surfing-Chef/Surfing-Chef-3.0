@@ -718,6 +718,9 @@ a {
 /*--------------------------------------------------------------
 ## Site Structure
 --------------------------------------------------------------*/
+/*
+* SITE HEADER STYLES AND STRUCTURE
+*/
 .site-header {
   background: rgba(0, 0, 0, 0.2);
   padding: 0 20px;
@@ -725,55 +728,67 @@ a {
   display: grid;
   align-items: center;
   grid-template-areas: "social social" "brand nav" "brand nav"; }
-  .site-header .social-icons {
-    grid-area: social;
-    font-size: 1.5em; }
-    .site-header .social-icons ul {
-      margin: 0;
-      padding: 10px 0;
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, 100px);
-      justify-content: center;
-      grid-gap: 10px;
-      text-align: center; }
-    .site-header .social-icons::after {
-      display: block;
-      content: '';
-      height: 1px;
-      background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.2), transparent); }
-  .site-header .site-branding {
-    grid-area: brand;
-    display: grid;
-    grid-template-columns: 60px 1fr;
-    grid-column-gap: 30px;
-    grid-template-areas: "logo sitename" "logo tagline"; }
-    .site-header .site-branding > * {
-      margin: 0; }
-    .site-header .site-branding .custom-logo-link {
-      grid-area: logo; }
-    .site-header .site-branding .site-title {
-      grid-area: sitename;
-      align-self: end;
-      display: grid;
-      justify-content: start; }
-    .site-header .site-branding .site-description {
-      grid-area: tagline;
-      align-self: start;
-      display: grid;
-      justify-content: start; }
-  .site-header .main-navigation {
-    grid-area: nav;
-    align-self: center; }
-    .site-header .main-navigation .menu {
-      display: flex;
-      justify-content: flex-end; }
-      .site-header .main-navigation .menu li {
-        padding: 0 10px; }
-    .site-header .main-navigation .sub-menu {
-      display: flex;
-      flex-direction: column; }
 
+.social-icons {
+  transition: 1s;
+  grid-area: social;
+  font-size: 1.5em; }
+  .social-icons ul {
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+    justify-content: center;
+    grid-gap: 10px;
+    text-align: center; }
+  .social-icons::after {
+    display: block;
+    content: '';
+    height: 1px;
+    background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.2), transparent); }
+
+.site-branding {
+  grid-area: brand;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-column-gap: 30px;
+  grid-template-areas: "logo sitename" "logo tagline"; }
+  .site-branding > * {
+    margin: 0; }
+
+.custom-logo-link {
+  grid-area: logo; }
+
+.site-title {
+  grid-area: sitename;
+  align-self: end;
+  display: grid;
+  justify-content: start;
+  font-size: 2em;
+  font-weight: bold; }
+
+.site-description {
+  grid-area: tagline;
+  align-self: start;
+  display: grid;
+  justify-content: start; }
+
+.main-navigation {
+  grid-area: nav;
+  align-self: center; }
+  .main-navigation .menu {
+    display: flex;
+    justify-content: flex-end; }
+    .main-navigation .menu li {
+      padding: 0 10px; }
+  .main-navigation .sub-menu {
+    display: flex;
+    flex-direction: column; }
+
+/*
+* SITE FOOTER STYLES AND STRUCTURE
+*/
 .site-footer {
   background: rgba(0, 0, 0, 0.2);
   padding: 20px;
