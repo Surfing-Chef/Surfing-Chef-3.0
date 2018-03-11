@@ -47,6 +47,7 @@ gulp.task('sass', function(){
 gulp.task('scripts', function(){
     gulp.src([
               'src/js/**/*.js',
+              '!src/js/customize.js',
               '!src/js/sc-scripts.js'
 
             ])
