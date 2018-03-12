@@ -8,9 +8,9 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link: rgba(0,0,0,0.8);
+$color__link-visited: rgba(0,0,0,0.8);
+$color__link-hover:  rgba(0,0,0,0.6);
 $color__text-main: #404040;
 
 $color__border-button: #ccc #ccc #bbb;
@@ -19,4 +19,4 @@ $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
 
-$color__test-grey: rgba(0,0,0,0.2);
+$color__test-grey: #666;
