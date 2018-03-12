@@ -113,10 +113,26 @@
     .site-header {
         width: $size__query-land;
     }
+
+    .social-icons {
+        display: none;
+    }
 }
 
 @media (max-width: $size__query-land) {
     .site-header {
-        width: $size__query-mobile;
+        width: 100vw - 2;
+    } 
+
+    .site-branding {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "sitename"
+        " . ";
+        .custom-logo-link, 
+        .site-description { 
+            display: none;
+        }
     }
+
 }
