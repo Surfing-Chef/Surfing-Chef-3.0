@@ -13,8 +13,7 @@
     grid-template-areas:
         "social social"
         "brand nav"
-        "brand nav";
-         
+        "brand nav";      
 }
 
 .social-icons {
@@ -83,28 +82,22 @@
     justify-content: start;
 }
 
-// NAVIGATION \\
-
-.main-navigation {
-    grid-area: nav;
-    align-self: center;
-    
-    .menu {
-        display: flex;
-        justify-content: flex-end;
-
-        li {
-            padding: 0 10px;
-        }
-    }
-
-    .sub-menu {
-        display: flex;
-        flex-direction: column;
+// MEDIA QUERIES \\
+@media (max-width: $size__query-tab) {
+    .site-branding {
+        margin-bottom: 20px;
     }
 }
 
-// MEDIA QUERIES \\
-@media (max-width: $size__query-tab) {
-   
+@media (max-width: $size__query-small) {
+    .site-header {
+        grid-template-areas:
+        "nav"
+        "brand"
+        "brand";
+    }
+
+    .social-icons {
+        display: none;
+    }
 }

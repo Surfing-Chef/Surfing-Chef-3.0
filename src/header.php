@@ -48,7 +48,7 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fas fa-chevron-circle-down"></i></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
