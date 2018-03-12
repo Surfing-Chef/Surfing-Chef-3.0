@@ -130,10 +130,10 @@
 			display: flex;
 		}
 
-		li:after {
+		li::after {
+			content: "\f107";
 			font-family: FontAwesome;
-			display: inline-block;
-			content: "\f167";
+			font-weight: 900;
 			width: 100%;
 			text-align: right;
 		}
