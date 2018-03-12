@@ -3,7 +3,13 @@
 */
 
 // SITE HEADER WRAPPER \\
+.header-wrapper {
+    display: grid;
+    justify-content: center;
+}
 
+
+// SITE HEADER \\
 .site-header {
     background: $color__test-grey;
     padding: 0 20px;
@@ -13,7 +19,8 @@
     grid-template-areas:
         "social social"
         "brand nav"
-        "brand nav";      
+        "brand nav";  
+    width: 1000px;            
 }
 
 .social-icons {
@@ -83,21 +90,20 @@
 }
 
 // MEDIA QUERIES \\
-@media (max-width: $size__query-tab) {
-    .site-branding {
-        margin-bottom: 20px;
+@media (max-width: $size__query-screen) {
+    .site-header {
+        width: $size__query-tab;
     }
 }
 
-@media (max-width: $size__query-small) {
+@media (max-width: $size__query-tab) {
     .site-header {
-        grid-template-areas:
-        "nav"
-        "brand"
-        "brand";
+        width: $size__query-mobile;
     }
+}
 
-    .social-icons {
-        display: none;
+@media (max-width: $size__query-mobile) {
+    .site-header {
+        width: 480px;
     }
 }

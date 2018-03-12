@@ -92,46 +92,38 @@
 
 /* Small menu. */
 .menu-toggle {
+	border: none;
+	padding: 0;
+	margin: 0;
+	background: none;
 	display: none;
 }
 
 @media screen and (max-width: $size__query-tab) {
-	
-	.menu-toggle {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		font-size: 1.2em;
-		background: none;
-		border: none;
-	
 
-		.svg-inline--fa {
-			margin: 0 auto;
-		}
-	}
-
-	.main-navigation .menu {
-		display: none;
-	}
-
-	.main-navigation.toggled .menu {
-		display: grid;
-		grid-template-columns: repeat( auto-fill, minmax(auto, 1fr) );
-		text-align: center;
-		justify-content: center;
+	.menu {
+		
 	}
 }
 
-@media (max-width: $size__query-small) {
+@media (min-width: $size__query-screen) {
+	// large screen
+}
 
-	.main-navigation.toggled .menu {
-
-	}
-
+@media (max-width: $size__query-tab ) {
 	.menu-toggle {
-
+		display: flex;
+        justify-content: flex-end;
+		font-size: 2em;
 	}
 
+	.main-navigation .menu {
+		display:none;
+	}
+}
+
+@media (max-width: $size__query-mobile) {
+    // mobile devices
 }
 
 .comment-navigation,

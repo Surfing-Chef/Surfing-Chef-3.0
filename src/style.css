@@ -596,24 +596,19 @@ a {
 
 /* Small menu. */
 .menu-toggle {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
   display: none; }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 870px) {
   .menu-toggle {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    font-size: 1.2em;
-    background: none;
-    border: none; }
-    .menu-toggle .svg-inline--fa {
-      margin: 0 auto; }
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2em; }
   .main-navigation .menu {
-    display: none; }
-  .main-navigation.toggled .menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
-    text-align: center;
-    justify-content: center; } }
+    display: none; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -739,13 +734,18 @@ a {
 /*
 * SITE HEADER STYLES AND STRUCTURE
 */
+.header-wrapper {
+  display: grid;
+  justify-content: center; }
+
 .site-header {
   background: rgba(0, 0, 0, 0.2);
   padding: 0 20px;
   grid-gap: 20px;
   display: grid;
   align-items: center;
-  grid-template-areas: "social social" "brand nav" "brand nav"; }
+  grid-template-areas: "social social" "brand nav" "brand nav";
+  width: 1000px; }
 
 .social-icons {
   transition: 1s;
@@ -792,15 +792,17 @@ a {
   display: grid;
   justify-content: start; }
 
-@media (max-width: 900px) {
-  .site-branding {
-    margin-bottom: 20px; } }
+@media (max-width: 1000px) {
+  .site-header {
+    width: 870px; } }
+
+@media (max-width: 870px) {
+  .site-header {
+    width: 600px; } }
 
 @media (max-width: 600px) {
   .site-header {
-    grid-template-areas: "nav" "brand" "brand"; }
-  .social-icons {
-    display: none; } }
+    width: 480px; } }
 
 /*
 * SITE FOOTER STYLES AND STRUCTURE
