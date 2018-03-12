@@ -93,17 +93,24 @@
 @media (max-width: $size__query-screen) {
     .site-header {
         width: $size__query-tab;
+
+        align-items: center;
+        grid-template-areas:
+            "social social"
+            "brand ."
+            "brand ."
+            "nav nav";  
     }
 }
 
 @media (max-width: $size__query-tab) {
     .site-header {
-        width: $size__query-mobile;
+        width: $size__query-land;
     }
 }
 
-@media (max-width: $size__query-mobile) {
+@media (max-width: $size__query-land) {
     .site-header {
-        width: 480px;
+        width: $size__query-mobile;
     }
 }

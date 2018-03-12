@@ -602,13 +602,25 @@ a {
   background: none;
   display: none; }
 
-@media (max-width: 870px) {
+@media (max-width: 1000px) {
   .menu-toggle {
     display: flex;
     justify-content: flex-end;
-    font-size: 2em; }
+    font-size: 2em;
+    margin-top: -115px; }
   .main-navigation .menu {
-    display: none; } }
+    display: none; }
+  .main-navigation.toggled .menu {
+    display: flex;
+    flex-direction: column; }
+    .main-navigation.toggled .menu li {
+      display: flex; }
+    .main-navigation.toggled .menu li:after {
+      font-family: FontAwesome;
+      display: inline-block;
+      content: "\f167";
+      width: 100%;
+      text-align: right; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -794,13 +806,15 @@ a {
 
 @media (max-width: 1000px) {
   .site-header {
-    width: 870px; } }
+    width: 770px;
+    align-items: center;
+    grid-template-areas: "social social" "brand ." "brand ." "nav nav"; } }
 
-@media (max-width: 870px) {
+@media (max-width: 770px) {
   .site-header {
-    width: 600px; } }
+    width: 560px; } }
 
-@media (max-width: 600px) {
+@media (max-width: 560px) {
   .site-header {
     width: 480px; } }
 

@@ -132,8 +132,9 @@ add_action( 'widgets_init', 'surfing_chef_widgets_init' );
  */
 function surfing_chef_scripts() {
 	// Within <HEAD>
-	wp_enqueue_script( 'surfing_chef-font-awesome', '//use.fontawesome.com/releases/v5.0.8/js/all.js', array(), false, false );
-
+	wp_enqueue_style( 'surfing_chef-font-awesome', "https://use.fontawesome.com/releases/v5.0.8/css/all.css" );
+	// wp_enqueue_script( 'surfing_chef-font-awesome', '//use.fontawesome.com/releases/v5.0.8/js/all.js', array(), false, false );
+	// <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 	// Within <BODY>
 
 	// ensure jquery is loaded once

@@ -110,19 +110,41 @@
 	// large screen
 }
 
-@media (max-width: $size__query-tab ) {
+@media (max-width: $size__query-screen){
 	.menu-toggle {
 		display: flex;
         justify-content: flex-end;
 		font-size: 2em;
+		margin-top: -115px;
 	}
 
 	.main-navigation .menu {
-		display:none;
+		display: none;
+	}
+
+	.main-navigation.toggled .menu {
+		display: flex;
+		flex-direction: column;
+
+		li {
+			display: flex;
+		}
+
+		li:after {
+			font-family: FontAwesome;
+			display: inline-block;
+			content: "\f167";
+			width: 100%;
+			text-align: right;
+		}
 	}
 }
 
-@media (max-width: $size__query-mobile) {
+@media (max-width: $size__query-tab ) {
+	
+}
+
+@media (max-width: $size__query-land) {
     // mobile devices
 }
 
