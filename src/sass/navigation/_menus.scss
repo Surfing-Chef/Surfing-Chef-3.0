@@ -145,7 +145,10 @@
 }
 
 @media (max-width: $size__query-land) {
-    // mobile devices
+
+    button.menu-toggle {
+		margin-top: -87px;
+	}
 }
 
 .comment-navigation,
