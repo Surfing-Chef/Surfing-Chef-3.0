@@ -66,6 +66,11 @@
 // Logo \\
 .custom-logo-link {
     grid-area: logo;
+
+    img {
+        -webkit-filter: drop-shadow(0 0 1px rgba(0,0,0,5) );
+        filter: drop-shadow(0 0 1px rgba(0,0,0,.5) )     
+    }
 }
 
 // Title \\
