@@ -31,8 +31,8 @@ body {
  */
 
 h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
+	font-size: 2rem;
+	margin: 0.67rem 0;
 }
 
 /* Grouping content
@@ -56,7 +56,7 @@ hr {
 
 pre {
 	font-family: monospace, monospace; /* 1 */
-	font-size: 1em; /* 2 */
+	font-size: 1rem; /* 2 */
 }
 
 /* Text-level semantics
@@ -99,7 +99,7 @@ code,
 kbd,
 samp {
 	font-family: monospace, monospace; /* 1 */
-	font-size: 1em; /* 2 */
+	font-size: 1rem; /* 2 */
 }
 
 /**
@@ -107,7 +107,7 @@ samp {
  */
 
 small {
-	font-size: 80%;
+	font-size: .8rem;
 }
 
 /**
@@ -117,18 +117,18 @@ small {
 
 sub,
 sup {
-	font-size: 75%;
+	font-size: .75rem;
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
 }
 
 sub {
-	bottom: -0.25em;
+	bottom: -0.25rem;
 }
 
 sup {
-	top: -0.5em;
+	top: -0.5rem;
 }
 
 /* Embedded content
@@ -156,7 +156,7 @@ optgroup,
 select,
 textarea {
 	font-family: inherit; /* 1 */
-	font-size: 100%; /* 1 */
+	font-size: 1rem; /* 1 */
 	line-height: 1.15; /* 1 */
 	margin: 0; /* 2 */
 }

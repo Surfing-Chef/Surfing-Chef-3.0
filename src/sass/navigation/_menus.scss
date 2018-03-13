@@ -1,9 +1,6 @@
 .main-navigation {
 	clear: both;
 	display: grid;
-	// float: left;
-	// width: 100%;
-
 	grid-area: nav;
     align-self: center;
 
@@ -20,12 +17,12 @@
 			float: left;
 			position: absolute;
 			top: 100%;
-			left: -999em;
+			left: -999rem;
 			z-index: 99999;
 
 			// Deeper Sub Menus
 			ul {
-				left: -999em;
+				left: -999rem;
 				top: 0;
 			}
 
@@ -37,7 +34,7 @@
 			}
 
 			a {
-				width: 200px;
+				width: 12.5rem;
 			}
 
 			:hover > a,
@@ -80,7 +77,7 @@
         justify-content: flex-end;
 
         li {
-            padding: 0 10px;
+            padding: 0 .625rem;
         }
     }
 
@@ -105,23 +102,12 @@
 	}
 }
 
-@media screen and (max-width: $size__query-tab) {
-
-	.menu {
-		
-	}
-}
-
-@media (min-width: $size__query-screen) {
-	// large screen
-}
-
 @media (max-width: $size__query-screen){
 	.menu-toggle {
 		display: flex;
         justify-content: flex-end;
 		font-size: 2em;
-		margin-top: -115px;
+		margin-top: -7.25rem;
 	}
 
 	.main-navigation .menu {
@@ -153,7 +139,7 @@
 @media (max-width: $size__query-land) {
 
     button.menu-toggle {
-		margin-top: -87px;
+		margin-top: -5.5rem;
 	}
 }
 
@@ -162,7 +148,7 @@
 .post-navigation {
 
 	.site-main & {
-		margin: 0 0 1.5em;
+		margin: 0 0 1.5rem;
 		overflow: hidden;
 	}
 

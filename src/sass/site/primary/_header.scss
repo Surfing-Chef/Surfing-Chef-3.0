@@ -11,31 +11,30 @@
 
 // SITE HEADER \\
 .site-header {
-    padding: 0 20px;
-    grid-gap: 20px;
+    padding: 0 1.25rem;
+    grid-gap: 1.25rem;
     display: grid;
     align-items: center;
     grid-template-areas:
         "social social"
         "brand nav"
         "brand nav";  
-    width: 1000px;            
+    width: 62rem;            
 }
 
 .social-icons {
     transition: 1s;
     grid-area: social;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     
     ul {
         margin: 0;
-        padding: 10px 0;
+        padding: .625rem 0;
         list-style: none;
         display: grid;
         grid-template-columns: repeat(auto-fit, 100px);
         justify-content: center;
-        grid-gap: 10px;
-        text-align: center;
+        grid-gap: .625rem        text-align: center;
     }
 
     &::after {
@@ -55,8 +54,8 @@
     }
     grid-area: brand;
     display: grid;
-    grid-template-columns: 60px 1fr;
-    grid-column-gap: 30px;
+    grid-template-columns: 3.75rem 1fr;
+    grid-column-gap: 2rem;
     grid-template-areas:
     "logo sitename"
     "logo tagline";
