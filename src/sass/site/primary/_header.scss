@@ -34,7 +34,8 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, 100px);
         justify-content: center;
-        grid-gap: .625rem        text-align: center;
+        grid-gap: .625rem;        
+        text-align: center;
     }
 
     &::after {
