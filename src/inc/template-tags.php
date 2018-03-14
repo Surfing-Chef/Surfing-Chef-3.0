@@ -143,9 +143,33 @@ if ( ! function_exists( 'surfing_chef_post_thumbnail' ) ) :
 				) ),
 			) );
 			?>
+			
 		</a>
 
 		<?php
 		endif; // End is_singular().
 	}
+endif;
+
+if ( ! function_exists( 'surfing_chef_post_meta' ) ) :
+		/**
+	 * Displays post tags.
+	 *
+	 * Places the author name, associated tags and comments query.
+	 */
+	function surfing_chef_post_tags() {
+	/* translators: used between list items, there is a space after the comma */
+		$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'surfing_chef' ) );
+		if ( $tags_list ) {
+			/* translators: 1: list of tags. */
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'surfing_chef' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+		}
+	}
+
+	function surfing_chef_post_meta() {
+		// surfing_chef_posted_on();
+		surfing_chef_posted_by();
+		surfing_chef_post_tags();	
+	}
+
 endif;
