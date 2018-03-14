@@ -2,17 +2,21 @@
 	padding: 0 1.25rem;
     grid-gap: 1.25rem;
     display: grid;
-	grid-template-columns: 3fr 12fr 5fr;
-	grid-template-areas: "pre content aft";
+	grid-template-columns: 12fr 5fr;
+	grid-template-areas: "content aft";
+	justify-items: center;
+	width: 70rem; 
+	margin: 0 auto;           
 }
 	
-	.content-area {
-		grid-area: content;
-	}
-	
-	aside.widget-area {
-		grid-area: aft;
-	}
+.content-area {
+	grid-area: content;
+}
+
+aside.widget-area {
+	grid-area: aft;
+}
+
 
 .sticky {
 	display: block;
