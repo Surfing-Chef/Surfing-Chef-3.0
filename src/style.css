@@ -792,7 +792,8 @@ a {
     margin: 0; }
 
 .custom-logo-link {
-  grid-area: logo; }
+  grid-area: logo;
+  align-self: center; }
   .custom-logo-link img {
     -webkit-filter: drop-shadow(0 0 1px black);
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.5)); }
@@ -804,6 +805,7 @@ a {
   justify-content: start;
   font-size: 2rem;
   font-weight: bold;
+  line-height: 2rem;
   z-index: 1; }
 
 .site-description {

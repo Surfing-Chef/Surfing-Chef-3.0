@@ -65,10 +65,11 @@
 // Logo \\
 .custom-logo-link {
     grid-area: logo;
+    align-self: center;
 
     img {
         -webkit-filter: drop-shadow(0 0 1px rgba(0,0,0,5) );
-        filter: drop-shadow(0 0 1px rgba(0,0,0,.5) )     
+        filter: drop-shadow(0 0 1px rgba(0,0,0,.5) );    
     }
 }
 
@@ -79,10 +80,9 @@
     align-self: end;
     display: grid;
     justify-content: start;
-    
     font-size: $font__site-title-size;
     font-weight: $font__site-title-weight;
-
+    line-height: 2rem;
     z-index: 1;
 }
 
