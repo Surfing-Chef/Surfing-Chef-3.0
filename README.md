@@ -16,6 +16,7 @@
 Surfing Chef 3.0 theme is licensed under the [GNU license](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html).  
 
 ## Dev Notes
-- Chrome didnt like .site with display: grid and grid-gap.  Research revealed over-nesting to be the reason.  
+- Chrome didnt like .site with display: grid and grid-gap.  Research revealed over-nesting to be the reason. 
+- Chrome didn't break long lines like URLs automatically, had to add `word-break:break-word` to normalize.
 
 ## To Do  
