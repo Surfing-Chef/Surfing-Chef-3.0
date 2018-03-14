@@ -10,6 +10,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php surfing_chef_post_thumbnail(); ?>
+
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -22,14 +25,11 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				surfing_chef_posted_on();
-				surfing_chef_posted_by();
+				surfing_chef_post_meta();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php surfing_chef_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

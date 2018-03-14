@@ -15,10 +15,7 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php
-			surfing_chef_posted_on();
-			surfing_chef_posted_by();
-			?>
+			<?php surfing_chef_post_meta(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
