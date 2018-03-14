@@ -128,11 +128,14 @@ if ( ! function_exists( 'surfing_chef_post_thumbnail' ) ) :
 
 			<div class="post-thumbnail">
 				<?php the_post_thumbnail(); ?>
+				<div class="post-date"><?php surfing_chef_posted_on(); ?></div>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
 
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+		
+			<div class="post-date"><?php surfing_chef_posted_on(); ?></div>
 			<?php
 			the_post_thumbnail( 'post-thumbnail', array(
 				'alt' => the_title_attribute( array(
