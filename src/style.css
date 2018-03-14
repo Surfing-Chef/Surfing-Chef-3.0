@@ -64,7 +64,8 @@ html {
  */
 body {
   margin: 0;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  word-break: break-word; }
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -852,11 +853,13 @@ a {
   grid-gap: 1.25rem;
   display: grid;
   grid-template-columns: 3fr 12fr 5fr;
-  grid-template-areas: "pre content after"; }
-  .site-content .content-area {
-    grid-area: content; }
-  .site-content aside.widget-area {
-    grid-area: after; }
+  grid-template-areas: "pre content aft"; }
+
+.content-area {
+  grid-area: content; }
+
+aside.widget-area {
+  grid-area: aft; }
 
 .sticky {
   display: block; }
