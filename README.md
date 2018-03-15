@@ -21,3 +21,4 @@ Surfing Chef 3.0 theme is licensed under the [GNU license](https://www.gnu.org/l
 - Chrome required width to be set on some elements in order to maintain a responsive nature  
 
 ## To Do  
+- Address extra space when media query changes
