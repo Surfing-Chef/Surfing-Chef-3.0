@@ -62,4 +62,6 @@
 
 	</div><!-- .header-wrapper -->
 
-	<div id="content" class="site-content">
+	<div class="content-wrapper">
+
+		<div id="content" class="site-content">
