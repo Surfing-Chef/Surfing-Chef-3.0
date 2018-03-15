@@ -60,6 +60,6 @@
 			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->
 
-	</div>
+	</div><!-- .header-wrapper -->
 
 	<div id="content" class="site-content">
