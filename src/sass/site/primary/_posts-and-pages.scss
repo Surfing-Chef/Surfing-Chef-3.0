@@ -25,15 +25,10 @@
 	grid-area: content;
 }
 
-.site-main{
-
-}
-
 // SIDEBAR \\
 aside.widget-area {
 	grid-area: aft;
 }
-
 
 .sticky {
 	display: block;
@@ -62,16 +57,10 @@ aside.widget-area {
 @media screen and (max-width: $size__query-screen) {
     .site-content {
 		width: $size__query-tab;
-		grid-template-columns: 1fr;
+		grid-template-columns: 100%;
 		grid-template-areas: 
 		"content" 
 		"aft";
-	}
-
-	.content-area {
-
-	}
-	.widget-area {
 	}
 }
 
