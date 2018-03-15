@@ -604,7 +604,7 @@ a {
   .menu-toggle:hover, .menu-toggle:focus, .menu-toggle:active {
     color: rgba(0, 0, 0, 0.6); }
 
-@media (max-width: 62.5rem) {
+@media screen and (max-width: 62.5rem) {
   .menu-toggle {
     display: flex;
     justify-content: flex-end;
@@ -624,7 +624,7 @@ a {
       width: 100%;
       text-align: right; } }
 
-@media (max-width: 35rem) {
+@media screen and (max-width: 35rem) {
   button.menu-toggle {
     margin-top: -5.5rem; } }
 

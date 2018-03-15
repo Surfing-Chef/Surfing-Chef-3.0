@@ -78,7 +78,7 @@
         justify-content: flex-end;
 
         li {
-            padding: 0 .625rem;
+            padding: .6rem 2rem;
         }
     }
 
@@ -103,7 +103,7 @@
 	}
 }
 
-@media (max-width: $size__query-screen){
+@media screen and (max-width: $size__query-screen){
 	.menu-toggle {
 		display: flex;
         justify-content: flex-end;
@@ -133,11 +133,8 @@
 	}
 }
 
-@media (max-width: $size__query-tab ) {
-	
-}
 
-@media (max-width: $size__query-land) {
+@media screen and (max-width: $size__query-land) {
 
     button.menu-toggle {
 		margin-top: -5.5rem;
