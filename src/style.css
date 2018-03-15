@@ -582,7 +582,8 @@ a {
     position: relative; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    width: 100%; }
   .main-navigation .menu {
     display: flex;
     justify-content: flex-end; }
@@ -814,7 +815,7 @@ a {
   display: grid;
   justify-content: start; }
 
-@media (max-width: 62.5rem) {
+@media screen and (max-width: 62.5rem) {
   .site-header {
     width: 48.125rem;
     align-items: center;
@@ -826,7 +827,7 @@ a {
   .social-icons {
     display: none; } }
 
-@media (max-width: 35rem) {
+@media screen and (max-width: 35rem) {
   .site-header {
     width: 98vw; }
   .site-branding {
@@ -850,15 +851,18 @@ a {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+/*
+* SITE CONTENT STYLES AND STRUCTURE
+*/
+.content-wrapper {
+  display: grid;
+  justify-content: center; }
+
 .site-content {
   padding: 0 1.25rem;
   grid-gap: 1.25rem;
   display: grid;
-  grid-template-columns: 12fr 5fr;
-  grid-template-areas: "content aft";
-  justify-items: center;
-  width: 70rem;
-  margin: 0 auto; }
+  grid-template-areas: "content aft"; }
 
 .content-area {
   grid-area: content; }
@@ -883,6 +887,21 @@ aside.widget-area {
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
+
+@media screen and (max-width: 62.5rem) {
+  .site-content {
+    width: 48.125rem;
+    grid-template-columns: 100%;
+    grid-template-areas: "content"  "aft"; } }
+
+@media screen and (max-width: 48.125rem) {
+  .site-content {
+    width: 35rem; } }
+
+@media screen and (max-width: 35rem) {
+  .site-content {
+    width: 98vw;
+    background: tan; } }
 
 /*--------------------------------------------------------------
 ## Comments
