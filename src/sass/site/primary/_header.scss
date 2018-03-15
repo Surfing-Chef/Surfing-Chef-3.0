@@ -96,7 +96,7 @@
 }
 
 // MEDIA QUERIES \\
-@media (max-width: $size__query-screen) {
+@media screen and (max-width: $size__query-screen) {
     .site-header {
         width: $size__query-tab;
 
@@ -119,7 +119,7 @@
     }
 }
 
-@media (max-width: $size__query-land) {
+@media screen and (max-width: $size__query-land) {
     .site-header {
         width: 100vw - 2;
     } 
