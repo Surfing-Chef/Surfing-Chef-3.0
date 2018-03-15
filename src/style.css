@@ -900,8 +900,7 @@ aside.widget-area {
 
 @media screen and (max-width: 35rem) {
   .site-content {
-    width: 98vw;
-    background: tan; } }
+    width: 98vw; } }
 
 /*--------------------------------------------------------------
 ## Comments
