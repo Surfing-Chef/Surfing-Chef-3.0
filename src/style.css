@@ -860,6 +860,7 @@ a {
   margin: 0 auto; }
 
 .banner-wrapper {
+  margin-top: -1px;
   display: grid;
   grid-template-columns: 100%;
   border-bottom: 1px solid #666; }
