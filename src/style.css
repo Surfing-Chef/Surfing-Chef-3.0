@@ -754,7 +754,8 @@ a {
 */
 .header-wrapper {
   display: grid;
-  justify-content: center; }
+  justify-content: center;
+  border-bottom: 1px solid #666; }
 
 .site-header {
   padding: 0 1.25rem;
@@ -762,7 +763,7 @@ a {
   display: grid;
   align-items: center;
   grid-template-areas: "social social" "brand nav" "brand nav";
-  width: 62rem; }
+  width: 62.5rem; }
 
 .social-icons {
   transition: 1s;
@@ -856,7 +857,40 @@ a {
 */
 .content-wrapper {
   display: grid;
-  justify-content: center; }
+  margin: 0 auto; }
+
+.banner-wrapper {
+  display: grid;
+  grid-template-columns: 100%;
+  border-bottom: 1px solid #666; }
+
+.banner-area {
+  padding: 0 1.25rem;
+  grid-gap: 1.25rem;
+  display: grid; }
+
+.breadcrumbs-wrapper {
+  padding: 0 1.25rem;
+  display: grid;
+  grid-gap: 1.25rem;
+  grid-template-columns: 100%;
+  width: 62.5rem;
+  margin: 0 auto;
+  font-size: .9rem; }
+
+.breadcrumbs {
+  position: relative; }
+
+.breadcrumbs a:after {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  border: 1px #222 solid;
+  transform: rotate(45deg);
+  top: .2rem;
+  border-left: none;
+  border-bottom: none; }
 
 .site-content {
   padding: 0 1.25rem;
@@ -893,17 +927,21 @@ aside.widget-area {
   margin: 0 0 1.5em; }
 
 @media screen and (max-width: 62.5rem) {
+  .site-content,
+  .breadcrumbs-wrapper {
+    width: 48.125rem; }
   .site-content {
-    width: 48.125rem;
     grid-template-columns: 100%;
     grid-template-areas: "content"  "aft"; } }
 
 @media screen and (max-width: 48.125rem) {
-  .site-content {
+  .site-content,
+  .breadcrumbs-wrapper {
     width: 35rem; } }
 
 @media screen and (max-width: 35rem) {
-  .site-content {
+  .site-content,
+  .breadcrumbs-wrapper {
     width: 98vw; } }
 
 /*--------------------------------------------------------------
