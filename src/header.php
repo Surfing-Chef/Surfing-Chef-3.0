@@ -64,4 +64,11 @@
 
 	<div class="content-wrapper">
 
+		<div class="banner-wrapper">
+			<div class="banner-area"></div>
+			<div class="breadcrumbs-wrapper">
+				<?php the_breadcrumb(); ?>
+			</div>
+		</div>
+
 		<div id="content" class="site-content">
