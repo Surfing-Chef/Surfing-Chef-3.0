@@ -192,7 +192,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 function the_breadcrumb() {
 
-    $sep = ' &nbsp&nbsp&nbsp&nbsp ';
+    $sep = '&nbsp&nbsp>&nbsp&nbsp';
 
     if (!is_front_page()) {
 
