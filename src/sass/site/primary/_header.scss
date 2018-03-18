@@ -6,8 +6,8 @@
 .header-wrapper {
     display: grid;
     justify-content: center;
+    border-bottom: 1px solid $color__border-abbr;
 }
-
 
 // SITE HEADER \\
 .site-header {
@@ -19,7 +19,7 @@
         "social social"
         "brand nav"
         "brand nav";  
-    width: 62rem;            
+    width: $size__query-screen;            
 }
 
 .social-icons {
