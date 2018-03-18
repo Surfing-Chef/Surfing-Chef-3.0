@@ -4,9 +4,12 @@
 
 // SITE HEADER WRAPPER \\
 .header-wrapper {
+    position: absolute;
+    width: 100%;
     display: grid;
     justify-content: center;
     border-bottom: 1px solid $color__border-abbr;
+    background: white;
 }
 
 // SITE HEADER \\

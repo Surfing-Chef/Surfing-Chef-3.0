@@ -4,6 +4,7 @@
 
 // SITE CONTENT WRAPPER \\
 .content-wrapper {
+	padding-top: 165px;
 	display: grid;
 	// justify-content: center;
 	margin: 0 auto;
@@ -97,6 +98,9 @@ aside.widget-area {
 }
 
 @media screen and (max-width: $size__query-tab) {
+	.content-wrapper {
+		padding-top: 108px;
+	}
 	.site-content,
 	.breadcrumbs-wrapper {
 		width: $size__query-land;		
@@ -104,6 +108,9 @@ aside.widget-area {
 }
 
 @media screen and (max-width: $size__query-land) {
+	.content-wrapper {
+		padding-top: 73px;
+	}
     .site-content,
 	.breadcrumbs-wrapper {
 		width: 100vw - 2;
