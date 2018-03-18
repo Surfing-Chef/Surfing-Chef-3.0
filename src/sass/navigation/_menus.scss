@@ -103,6 +103,23 @@
 	}
 }
 
+/* Search button in menu. */
+.menu-search-button {
+	margin-top: 4px;
+	display: inline-block;
+	position: relative;
+	border-radius: 50%;
+	height: 2rem;
+	width: 1rem;
+	background: none;
+	
+	.svg-inline--fa {
+		position: absolute;
+		top: 31%;
+		left: 35%;
+	}
+}
+
 @media screen and (max-width: $size__query-screen){
 	.menu-toggle {
 		display: flex;
@@ -111,7 +128,8 @@
 		margin-top: -7.25rem;
 	}
 
-	.main-navigation .menu {
+	.main-navigation .menu,
+	.menu-search-button {
 		display: none;
 	}
 

@@ -604,13 +604,28 @@ a {
   .menu-toggle:hover, .menu-toggle:focus, .menu-toggle:active {
     color: rgba(0, 0, 0, 0.6); }
 
+/* Search button in menu. */
+.menu-search-button {
+  margin-top: 4px;
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  height: 2rem;
+  width: 1rem;
+  background: none; }
+  .menu-search-button .svg-inline--fa {
+    position: absolute;
+    top: 31%;
+    left: 35%; }
+
 @media screen and (max-width: 62.5rem) {
   .menu-toggle {
     display: flex;
     justify-content: flex-end;
     font-size: 2em;
     margin-top: -7.25rem; }
-  .main-navigation .menu {
+  .main-navigation .menu,
+  .menu-search-button {
     display: none; }
   .main-navigation.toggled .menu {
     display: flex;
@@ -753,9 +768,12 @@ a {
 * SITE HEADER STYLES AND STRUCTURE
 */
 .header-wrapper {
+  position: absolute;
+  width: 100%;
   display: grid;
   justify-content: center;
-  border-bottom: 1px solid #666; }
+  border-bottom: 1px solid #666;
+  background: white; }
 
 .site-header {
   padding: 0 1.25rem;
@@ -856,6 +874,7 @@ a {
 * SITE CONTENT STYLES AND STRUCTURE
 */
 .content-wrapper {
+  padding-top: 165px;
   display: grid;
   margin: 0 auto; }
 
@@ -925,11 +944,15 @@ aside.widget-area {
     grid-template-areas: "content"  "aft"; } }
 
 @media screen and (max-width: 48.125rem) {
+  .content-wrapper {
+    padding-top: 108px; }
   .site-content,
   .breadcrumbs-wrapper {
     width: 35rem; } }
 
 @media screen and (max-width: 35rem) {
+  .content-wrapper {
+    padding-top: 73px; }
   .site-content,
   .breadcrumbs-wrapper {
     width: 98vw; } }

@@ -240,3 +240,15 @@ function the_breadcrumb() {
         echo '</div>';
     }
 }
+
+/**
+ * Add a search button into main menu.
+ */
+
+add_filter( 'wp_nav_menu_items','add_search_box', 10, 2 );
+function add_search_box( $items, $args ) {
+	$items .= '<button class="menu-search-button" aria-controls="" aria-expanded=""><i class="fas fa-search"></i></button>';
+// $items .= '<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fas fa-bars"></i></button>';	
+// $items .= '<li class="menu-search">' . get_search_form( false ) . '</li>';
+return $items;
+}
