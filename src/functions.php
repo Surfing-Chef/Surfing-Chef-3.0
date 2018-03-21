@@ -192,7 +192,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 function the_breadcrumb() {
 
-    $sep = '&nbsp&nbsp>&nbsp&nbsp';
+    $sep = '&nbsp&nbsp&gt;&nbsp&nbsp';
 
     if (!is_front_page()) {
 
@@ -204,7 +204,7 @@ function the_breadcrumb() {
         echo '</a>' . $sep;
 
         if (is_category() || is_single() ){
-            the_category('title_li=');
+            the_category($sep,'single', true);
         } elseif (is_archive() || is_single()){
             if ( is_day() ) {
                 printf( __( '%s', 'text_domain' ), get_the_date() );
