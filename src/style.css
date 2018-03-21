@@ -813,10 +813,18 @@ a {
 
 .custom-logo-link {
   grid-area: logo;
-  align-self: center; }
-  .custom-logo-link img {
-    -webkit-filter: drop-shadow(0 0 1px black);
-    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.5)); }
+  align-self: center;
+  position: relative; }
+  .custom-logo-link::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    border: 1px solid #666666; }
 
 .site-title {
   grid-area: sitename;
