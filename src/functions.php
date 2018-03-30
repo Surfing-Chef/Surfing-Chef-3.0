@@ -141,8 +141,7 @@ function surfing_chef_scripts() {
 
 	// ensure jquery is loaded once
 	wp_deregister_script('jquery');
-	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), false, true);
-	
+	wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), false, true);
 
 	wp_enqueue_script('sc-custom-script', get_template_directory_uri() .'/js/sc-scripts.js', array('jquery'), false, true);
 
@@ -155,6 +154,7 @@ function surfing_chef_scripts() {
 	}
 
 	wp_enqueue_style( 'surfing_chef-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'surfing_chef-animate.css', get_template_directory_uri() . '/css/animate.css' );
 }
 add_action( 'wp_enqueue_scripts', 'surfing_chef_scripts' );
 
@@ -248,7 +248,6 @@ function the_breadcrumb() {
 add_filter( 'wp_nav_menu_items','add_search_box', 10, 2 );
 function add_search_box( $items, $args ) {
 	$items .= '<button class="menu-search-button" aria-controls="" aria-expanded=""><i class="fas fa-search"></i></button>';
-// $items .= '<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fas fa-bars"></i></button>';	
-// $items .= '<li class="menu-search">' . get_search_form( false ) . '</li>';
-return $items;
+	$items .= '<div class="menu-search">' . get_search_form( false ) . '</div>';
+	return $items;
 }
