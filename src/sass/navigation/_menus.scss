@@ -75,7 +75,8 @@
 
 	.menu {
         display: flex;
-        justify-content: flex-end;
+		justify-content: flex-end;
+		position: relative;
 
         li {
             padding: .6rem 2rem;
@@ -112,11 +113,22 @@
 	height: 2rem;
 	width: 1rem;
 	background: none;
+	cursor: pointer;
 	
 	.svg-inline--fa {
 		position: absolute;
 		top: 31%;
 		left: 35%;
+	}
+}
+
+.main-navigation .menu-search {
+	// display: none;
+	position: absolute;
+	top: 40px;
+	
+	&.invisible {
+		visibility: hidden;
 	}
 }
 
