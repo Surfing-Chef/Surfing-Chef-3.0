@@ -123,13 +123,12 @@
 }
 
 .main-navigation .menu-search {
-	// display: none;
 	position: absolute;
 	top: 40px;
-	
-	&.invisible {
-		visibility: hidden;
-	}
+	transform: translateX(110%);
+	opacity: 0;
+	background-color: bisque;
+	transition: background-color 0.3s ease-out .2s, opacity 0.3s ease-out .2s, transform 0.3s ease-out;
 }
 
 @media screen and (max-width: $size__query-screen){
